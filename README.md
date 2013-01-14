@@ -1,6 +1,8 @@
 Calculator
 ==========
 
+Andrew Braunstein
+
 This is the first assignment for CIS195.
 
 
