@@ -23,6 +23,12 @@ Single view calculator app for CIS 195
 * Parser
     * Maybe use [ParseKit](http://parsekit.com/)
     * Possibly just hand roll it
-    * Maybe transform infix notation to polish notation to do
-      computations on
+* Classes
+    * Echo area - Deals with showing the user either what they have
+      typed or what was computed
+    * Parser - Parses the text into a tree like data structure that
+      can then be evaluated by the calculator
+    * Calculator - Deals with the computations and the current
+      calculator state (history, last equation, constants, etc.)
+        
     
