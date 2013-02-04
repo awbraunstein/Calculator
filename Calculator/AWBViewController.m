@@ -18,6 +18,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+  
+  // Setup the background image
+  
+  UIImage * patternImage = [UIImage imageNamed:@"use_your_illusion.png"];
+  self.view.backgroundColor = [UIColor colorWithPatternImage:patternImage];
 }
 
 - (void)didReceiveMemoryWarning

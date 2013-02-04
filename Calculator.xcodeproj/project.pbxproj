@@ -24,6 +24,10 @@
 		8097B81B16A47663005DD3FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8097B7F316A47663005DD3FB /* Foundation.framework */; };
 		8097B82316A47663005DD3FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8097B82116A47663005DD3FB /* InfoPlist.strings */; };
 		8097B82616A47664005DD3FB /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8097B82516A47664005DD3FB /* CalculatorTests.m */; };
+		80AE3B5116B9B3570042C11D /* use_your_illusion_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 80AE3B4F16B9B3570042C11D /* use_your_illusion_@2X.png */; };
+		80AE3B5216B9B3570042C11D /* use_your_illusion.png in Resources */ = {isa = PBXBuildFile; fileRef = 80AE3B5016B9B3570042C11D /* use_your_illusion.png */; };
+		80DA92D916B9AD5800F90BB1 /* grid_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 80DA92D716B9AD5800F90BB1 /* grid_@2X.png */; };
+		80DA92DA16B9AD5800F90BB1 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 80DA92D816B9AD5800F90BB1 /* grid.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,10 @@
 		8097B82216A47663005DD3FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8097B82416A47663005DD3FB /* CalculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorTests.h; sourceTree = "<group>"; };
 		8097B82516A47664005DD3FB /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
+		80AE3B4F16B9B3570042C11D /* use_your_illusion_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "use_your_illusion_@2X.png"; sourceTree = "<group>"; };
+		80AE3B5016B9B3570042C11D /* use_your_illusion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = use_your_illusion.png; sourceTree = "<group>"; };
+		80DA92D716B9AD5800F90BB1 /* grid_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grid_@2X.png"; sourceTree = "<group>"; };
+		80DA92D816B9AD5800F90BB1 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,7 @@
 		8097B7E216A47663005DD3FB = {
 			isa = PBXGroup;
 			children = (
+				80DA92D516B9AD3C00F90BB1 /* Resources */,
 				8097B7F716A47663005DD3FB /* Calculator */,
 				8097B81E16A47663005DD3FB /* CalculatorTests */,
 				8097B7F016A47663005DD3FB /* Frameworks */,
@@ -161,6 +170,18 @@
 				8097B82116A47663005DD3FB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80DA92D516B9AD3C00F90BB1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				80AE3B4F16B9B3570042C11D /* use_your_illusion_@2X.png */,
+				80AE3B5016B9B3570042C11D /* use_your_illusion.png */,
+				80DA92D716B9AD5800F90BB1 /* grid_@2X.png */,
+				80DA92D816B9AD5800F90BB1 /* grid.png */,
+			);
+			name = Resources;
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +262,10 @@
 				8097B80816A47663005DD3FB /* Default-568h@2x.png in Resources */,
 				8097B80B16A47663005DD3FB /* MainStoryboard_iPhone.storyboard in Resources */,
 				8097B80E16A47663005DD3FB /* MainStoryboard_iPad.storyboard in Resources */,
+				80DA92D916B9AD5800F90BB1 /* grid_@2X.png in Resources */,
+				80DA92DA16B9AD5800F90BB1 /* grid.png in Resources */,
+				80AE3B5116B9B3570042C11D /* use_your_illusion_@2X.png in Resources */,
+				80AE3B5216B9B3570042C11D /* use_your_illusion.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +487,7 @@
 				8097B82B16A47664005DD3FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8097B82C16A47664005DD3FB /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +496,7 @@
 				8097B82E16A47664005DD3FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
