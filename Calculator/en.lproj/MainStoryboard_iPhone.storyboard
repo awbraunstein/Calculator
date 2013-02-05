@@ -22,7 +22,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="one:" destination="2" eventType="touchUpInside" id="no7-lT-YyF"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="PqR-Qz-spg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WwW-MM-Ntz">
@@ -35,7 +35,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="two:" destination="2" eventType="touchUpInside" id="7Vs-Wi-cGf"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="38D-wE-k7C"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eIh-sB-emy">
@@ -48,7 +48,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="sqrt:" destination="2" eventType="touchUpInside" id="iog-yg-K3c"/>
+                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="1EB-lk-lxM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CdI-G9-NnZ">
@@ -61,7 +61,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="three:" destination="2" eventType="touchUpInside" id="dIh-Es-0xn"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="8uO-Lm-e8U"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cIS-T5-hOy">
@@ -74,7 +74,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="four:" destination="2" eventType="touchUpInside" id="N6j-wc-Jv7"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="PoK-K7-Bnp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GQW-OW-yiO">
@@ -87,7 +87,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="five:" destination="2" eventType="touchUpInside" id="Vwj-BK-xtC"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="DHp-O0-aVa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="I6U-ZC-v2h">
@@ -100,7 +100,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="six:" destination="2" eventType="touchUpInside" id="1Ki-G0-Fj2"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="gXL-IQ-2nC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mwg-ft-oHi">
@@ -113,7 +113,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="seven:" destination="2" eventType="touchUpInside" id="fFc-qB-Ax4"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="VAn-Jc-x3E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ofy-PK-DI5">
@@ -139,7 +139,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="divide:" destination="2" eventType="touchUpInside" id="Hb3-sc-YAR"/>
+                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="YFc-YA-Eot"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o9a-V6-fXz">
@@ -152,7 +152,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="times:" destination="2" eventType="touchUpInside" id="uLj-Zh-lUm"/>
+                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="3JW-EU-ndb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5sy-4M-pEG">
@@ -165,7 +165,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="closeParen:" destination="2" eventType="touchUpInside" id="UEk-E2-E8O"/>
+                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="7ZH-MQ-J8C"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hN4-pJ-czp">
@@ -178,7 +178,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pi:" destination="2" eventType="touchUpInside" id="Do8-DE-iSV"/>
+                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="9dZ-Cl-hjM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Gs6-bW-1Dc">
@@ -191,7 +191,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="euler:" destination="2" eventType="touchUpInside" id="ghQ-2t-WVE"/>
+                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="vnH-Qo-B4E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="45m-m1-hTs">
@@ -204,7 +204,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="eight:" destination="2" eventType="touchUpInside" id="OLZ-P9-zdS"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="BK1-0q-UBu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sl1-7d-apP">
@@ -217,7 +217,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="nine:" destination="2" eventType="touchUpInside" id="qi8-Vt-SeT"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="36l-bi-eAP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yr7-Bm-zQY">
@@ -230,7 +230,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="dot:" destination="2" eventType="touchUpInside" id="Lmh-cK-ZRK"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="V0s-Ap-ht4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mnv-8i-Dpb">
@@ -243,7 +243,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="zero:" destination="2" eventType="touchUpInside" id="rFH-sx-q3o"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="nnv-lK-DVx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X0f-k4-7f1">
@@ -256,7 +256,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="equals:" destination="2" eventType="touchUpInside" id="uUj-8j-T6e"/>
+                                    <action selector="evaluate:" destination="2" eventType="touchUpInside" id="gcC-F6-AZv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YWI-7U-cvh">
@@ -269,7 +269,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="plus:" destination="2" eventType="touchUpInside" id="dRL-db-oP9"/>
+                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="L0F-t9-9bq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VKR-98-YtB">
@@ -282,7 +282,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="minus:" destination="2" eventType="touchUpInside" id="EX2-r9-wVb"/>
+                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="Q0o-YK-ssr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eu8-Lq-Nrm">
@@ -302,7 +302,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="openParen:" destination="2" eventType="touchUpInside" id="59h-so-ote"/>
+                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="nB8-QH-Lrt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -327,26 +327,19 @@
             <relationships>
                 <relationship kind="action" name="clear:"/>
                 <relationship kind="action" name="closeParen:"/>
+                <relationship kind="action" name="digitPressed:" candidateClass="UIButton"/>
                 <relationship kind="action" name="divide:"/>
                 <relationship kind="action" name="dot:"/>
-                <relationship kind="action" name="eight:"/>
                 <relationship kind="action" name="equals:"/>
                 <relationship kind="action" name="euler:"/>
-                <relationship kind="action" name="five:"/>
-                <relationship kind="action" name="four:"/>
+                <relationship kind="action" name="evaluate:" candidateClass="UIButton"/>
                 <relationship kind="action" name="minus:"/>
-                <relationship kind="action" name="nine:"/>
-                <relationship kind="action" name="one:"/>
                 <relationship kind="action" name="openParen:"/>
+                <relationship kind="action" name="operatorPressed:" candidateClass="UIButton"/>
                 <relationship kind="action" name="pi:"/>
                 <relationship kind="action" name="plus:"/>
-                <relationship kind="action" name="seven:"/>
-                <relationship kind="action" name="six:"/>
                 <relationship kind="action" name="sqrt:"/>
-                <relationship kind="action" name="three:"/>
                 <relationship kind="action" name="times:"/>
-                <relationship kind="action" name="two:"/>
-                <relationship kind="action" name="zero:"/>
                 <relationship kind="outlet" name="echoArea" candidateClass="UILabel"/>
             </relationships>
         </class>
