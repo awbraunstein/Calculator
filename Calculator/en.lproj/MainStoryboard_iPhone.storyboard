@@ -21,6 +21,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="one:" destination="2" eventType="touchUpInside" id="no7-lT-YyF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WwW-MM-Ntz">
                                 <rect key="frame" x="106" y="325" width="50" height="50"/>
@@ -31,6 +34,22 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="two:" destination="2" eventType="touchUpInside" id="7Vs-Wi-cGf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eIh-sB-emy">
+                                <rect key="frame" x="106" y="151" width="50" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                                <state key="normal" title="√" backgroundImage="grid.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sqrt:" destination="2" eventType="touchUpInside" id="iog-yg-K3c"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CdI-G9-NnZ">
                                 <rect key="frame" x="164" y="325" width="50" height="50"/>
@@ -41,6 +60,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="three:" destination="2" eventType="touchUpInside" id="dIh-Es-0xn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cIS-T5-hOy">
                                 <rect key="frame" x="48" y="267" width="50" height="50"/>
@@ -51,6 +73,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="four:" destination="2" eventType="touchUpInside" id="N6j-wc-Jv7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GQW-OW-yiO">
                                 <rect key="frame" x="106" y="269" width="50" height="50"/>
@@ -61,6 +86,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="five:" destination="2" eventType="touchUpInside" id="Vwj-BK-xtC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="I6U-ZC-v2h">
                                 <rect key="frame" x="164" y="269" width="50" height="50"/>
@@ -71,6 +99,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="six:" destination="2" eventType="touchUpInside" id="1Ki-G0-Fj2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mwg-ft-oHi">
                                 <rect key="frame" x="48" y="209" width="50" height="50"/>
@@ -81,6 +112,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="seven:" destination="2" eventType="touchUpInside" id="fFc-qB-Ax4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ofy-PK-DI5">
                                 <rect key="frame" x="48" y="151" width="50" height="50"/>
@@ -91,16 +125,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zvM-s3-xik">
-                                <rect key="frame" x="106" y="152" width="50" height="50"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
-                                <state key="normal" title="±" backgroundImage="grid.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <action selector="clear:" destination="2" eventType="touchUpInside" id="rys-47-VnN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Itq-YF-A3k">
                                 <rect key="frame" x="164" y="152" width="50" height="50"/>
@@ -111,6 +138,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="divide:" destination="2" eventType="touchUpInside" id="Hb3-sc-YAR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o9a-V6-fXz">
                                 <rect key="frame" x="222" y="152" width="50" height="50"/>
@@ -121,26 +151,22 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rgq-8b-oEv">
-                                <rect key="frame" x="48" y="93" width="50" height="50"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
-                                <state key="normal" title="√" backgroundImage="grid.png">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <action selector="times:" destination="2" eventType="touchUpInside" id="uLj-Zh-lUm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5sy-4M-pEG">
                                 <rect key="frame" x="106" y="93" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
-                                <state key="normal" title="^2" backgroundImage="grid.png">
+                                <state key="normal" title=")" backgroundImage="grid.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeParen:" destination="2" eventType="touchUpInside" id="UEk-E2-E8O"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hN4-pJ-czp">
                                 <rect key="frame" x="164" y="93" width="50" height="50"/>
@@ -151,6 +177,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pi:" destination="2" eventType="touchUpInside" id="Do8-DE-iSV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Gs6-bW-1Dc">
                                 <rect key="frame" x="222" y="93" width="50" height="50"/>
@@ -161,6 +190,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="euler:" destination="2" eventType="touchUpInside" id="ghQ-2t-WVE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="45m-m1-hTs">
                                 <rect key="frame" x="106" y="211" width="50" height="50"/>
@@ -171,6 +203,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="eight:" destination="2" eventType="touchUpInside" id="OLZ-P9-zdS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sl1-7d-apP">
                                 <rect key="frame" x="164" y="211" width="50" height="50"/>
@@ -181,6 +216,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="nine:" destination="2" eventType="touchUpInside" id="qi8-Vt-SeT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yr7-Bm-zQY">
                                 <rect key="frame" x="164" y="383" width="50" height="50"/>
@@ -191,6 +229,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="dot:" destination="2" eventType="touchUpInside" id="Lmh-cK-ZRK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mnv-8i-Dpb">
                                 <rect key="frame" x="48" y="383" width="108" height="50"/>
@@ -201,6 +242,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="zero:" destination="2" eventType="touchUpInside" id="rFH-sx-q3o"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X0f-k4-7f1">
                                 <rect key="frame" x="222" y="325" width="50" height="108"/>
@@ -211,6 +255,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="equals:" destination="2" eventType="touchUpInside" id="uUj-8j-T6e"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YWI-7U-cvh">
                                 <rect key="frame" x="222" y="269" width="50" height="50"/>
@@ -221,6 +268,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="plus:" destination="2" eventType="touchUpInside" id="dRL-db-oP9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VKR-98-YtB">
                                 <rect key="frame" x="222" y="211" width="50" height="50"/>
@@ -231,18 +281,37 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="minus:" destination="2" eventType="touchUpInside" id="EX2-r9-wVb"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="42.898989" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eu8-Lq-Nrm">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eu8-Lq-Nrm">
                                 <rect key="frame" x="0.0" y="14" width="320" height="55"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4hx-eo-HIX">
+                                <rect key="frame" x="48" y="93" width="50" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                                <state key="normal" title="(" backgroundImage="grid.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openParen:" destination="2" eventType="touchUpInside" id="59h-so-ote"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                     </view>
+                    <connections>
+                        <outlet property="echoArea" destination="eu8-Lq-Nrm" id="uew-ah-N2U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -255,6 +324,31 @@
     <classes>
         <class className="AWBViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AWBViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="clear:"/>
+                <relationship kind="action" name="closeParen:"/>
+                <relationship kind="action" name="divide:"/>
+                <relationship kind="action" name="dot:"/>
+                <relationship kind="action" name="eight:"/>
+                <relationship kind="action" name="equals:"/>
+                <relationship kind="action" name="euler:"/>
+                <relationship kind="action" name="five:"/>
+                <relationship kind="action" name="four:"/>
+                <relationship kind="action" name="minus:"/>
+                <relationship kind="action" name="nine:"/>
+                <relationship kind="action" name="one:"/>
+                <relationship kind="action" name="openParen:"/>
+                <relationship kind="action" name="pi:"/>
+                <relationship kind="action" name="plus:"/>
+                <relationship kind="action" name="seven:"/>
+                <relationship kind="action" name="six:"/>
+                <relationship kind="action" name="sqrt:"/>
+                <relationship kind="action" name="three:"/>
+                <relationship kind="action" name="times:"/>
+                <relationship kind="action" name="two:"/>
+                <relationship kind="action" name="zero:"/>
+                <relationship kind="outlet" name="echoArea" candidateClass="UILabel"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
