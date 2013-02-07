@@ -7,12 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AWBExpressionToken.h"
+#import "AWBInfixParser.h"
 
 @interface AWBViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *echoArea;
 - (IBAction)clear:(id)sender;
 - (IBAction)digitPressed:(UIButton *)sender;
 - (IBAction)evaluate:(UIButton *)sender;
-- (IBAction)operatorPressed:(UIButton *)sender;
+- (IBAction)symbolPressed:(UIButton *)sender;
+
+
+@property NSMutableArray * tokenList;
+@property BOOL inNumber;
+@property BOOL readyToClear;
+@property NSString * currentNumber;
 
 @end

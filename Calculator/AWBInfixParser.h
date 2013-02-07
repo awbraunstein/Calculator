@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface AWBInfixParser : NSObject
 
-+ (NSString*) parseExpression:(NSString*)string;
-+ (NSMutableArray*) tokenizeExpression:(NSString*)string;
++ (NSString*) parseExpression:(NSMutableArray*)tokens;
++ (NSMutableArray*) shuntingYard:(NSMutableArray*)tokens;
++ (NSNumber*) evaluateRPN:(NSMutableArray*)tokens;
 
 @end

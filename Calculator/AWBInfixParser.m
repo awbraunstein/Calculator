@@ -10,5 +10,17 @@
 
 @implementation AWBInfixParser
 
++ (NSString*) parseExpression:(NSMutableArray*)tokens {
+  return [[self evaluateRPN:[self shuntingYard:tokens]] stringValue];
+}
+
++ (NSMutableArray*) shuntingYard:(NSMutableArray*)tokens {
+  
+}
+
++ (NSNumber*) evaluateRPN:(NSMutableArray*)tokens {
+  
+}
+
 
 @end

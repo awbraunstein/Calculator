@@ -48,7 +48,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="1EB-lk-lxM"/>
+                                    <action selector="symbolPressed:" destination="2" eventType="touchUpInside" id="fCC-Rr-NAk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CdI-G9-NnZ">
@@ -139,7 +139,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="YFc-YA-Eot"/>
+                                    <action selector="symbolPressed:" destination="2" eventType="touchUpInside" id="8qj-We-RE6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="o9a-V6-fXz">
@@ -152,7 +152,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="3JW-EU-ndb"/>
+                                    <action selector="symbolPressed:" destination="2" eventType="touchUpInside" id="nQT-Vi-dzo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5sy-4M-pEG">
@@ -165,7 +165,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="7ZH-MQ-J8C"/>
+                                    <action selector="symbolPressed:" destination="2" eventType="touchUpInside" id="QCb-Bn-3Je"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hN4-pJ-czp">
@@ -178,7 +178,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="9dZ-Cl-hjM"/>
+                                    <action selector="symbolPressed:" destination="2" eventType="touchUpInside" id="IBf-6t-bCg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Gs6-bW-1Dc">
@@ -191,7 +191,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="vnH-Qo-B4E"/>
+                                    <action selector="symbolPressed:" destination="2" eventType="touchUpInside" id="4xx-NS-4Ui"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="45m-m1-hTs">
@@ -269,7 +269,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="L0F-t9-9bq"/>
+                                    <action selector="symbolPressed:" destination="2" eventType="touchUpInside" id="otP-dg-cAL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VKR-98-YtB">
@@ -282,7 +282,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="Q0o-YK-ssr"/>
+                                    <action selector="symbolPressed:" destination="2" eventType="touchUpInside" id="a9t-BG-OBY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eu8-Lq-Nrm">
@@ -302,7 +302,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operatorPressed:" destination="2" eventType="touchUpInside" id="nB8-QH-Lrt"/>
+                                    <action selector="symbolPressed:" destination="2" eventType="touchUpInside" id="A2A-2S-1EZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -326,20 +326,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AWBViewController.h"/>
             <relationships>
                 <relationship kind="action" name="clear:"/>
-                <relationship kind="action" name="closeParen:"/>
                 <relationship kind="action" name="digitPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="divide:"/>
-                <relationship kind="action" name="dot:"/>
-                <relationship kind="action" name="equals:"/>
-                <relationship kind="action" name="euler:"/>
                 <relationship kind="action" name="evaluate:" candidateClass="UIButton"/>
-                <relationship kind="action" name="minus:"/>
-                <relationship kind="action" name="openParen:"/>
-                <relationship kind="action" name="operatorPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="pi:"/>
-                <relationship kind="action" name="plus:"/>
-                <relationship kind="action" name="sqrt:"/>
-                <relationship kind="action" name="times:"/>
+                <relationship kind="action" name="symbolPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="echoArea" candidateClass="UILabel"/>
             </relationships>
         </class>

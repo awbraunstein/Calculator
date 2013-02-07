@@ -8,20 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
+enum tokType {PLUS,
+  MINUS,
+  MULT,
+  DIV,
+  SQRT,
+  LPAREN,
+  RPAREN,
+  PI,
+  E,
+  VAL};
+
 @interface AWBExpressionToken : NSObject
 
-enum tokType {PLUS,
-      MINUS,
-      MULT,
-      DIV,
-      SQRT,
-      LPAREN,
-      RPAREN,
-      PI,
-      E,
-      VAL};
-
-@property enum tokType * type;
+@property enum tokType type;
 @property NSNumber * val;
+
+- (id) initWithSymbol: (NSString*) symbol;
+
 
 @end
