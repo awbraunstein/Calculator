@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <math.h>
 
 enum tokType {PLUS,
   MINUS,
   MULT,
   DIV,
-  SQRT,
+  POW,
   LPAREN,
   RPAREN,
   PI,
@@ -25,6 +26,5 @@ enum tokType {PLUS,
 @property NSNumber * val;
 
 - (id) initWithSymbol: (NSString*) symbol;
-
 
 @end

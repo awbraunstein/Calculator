@@ -90,7 +90,7 @@
       NSLog(@"%d", tok.type);
     }
   }
-  //[self.echoArea setText:[AWBInfixParser parseExpression:self.tokenList]];
+  [self.echoArea setText:[AWBInfixParser parseExpression:self.tokenList]];
   self.readyToClear = YES;
   self.inNumber = NO;
 }

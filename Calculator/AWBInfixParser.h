@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AWBExpressionToken.h"
 
 
 @interface AWBInfixParser : NSObject
