@@ -11,22 +11,10 @@
 @implementation AWBInfixParser
 
 + (NSString*) parseExpression:(NSMutableArray*)tokens {
-  return [[self evaluateRPN:[self shuntingYard:tokens]] stringValue];
+  return [self evaluateRPN:[self shuntingYard:tokens]];
 }
 
 + (NSMutableArray*) shuntingYard:(NSMutableArray*)tokens {
-  
-  NSLog(@"********************");
-  
-  for (AWBExpressionToken* tok in tokens) {
-    if (tok.type == VAL) {
-      NSLog(@"val: %@", tok.val);
-    } else {
-      NSLog(@"%d", tok.type);
-    }
-  }
-  
-  NSLog(@"********************");
   
   NSMutableArray *outQ = [[NSMutableArray alloc] init];
   NSMutableArray *stack = [[NSMutableArray alloc] init];
@@ -71,12 +59,16 @@
       
       if (!rp) {
         NSLog(@"Error: Mismatched parentheses");
-        return nil;
+        AWBExpressionToken * et = [[AWBExpressionToken alloc] initWithError:@"Error: Mismatched parentheses"];
+        [outQ insertObject:et atIndex:0];
+        return outQ;
       }
       
     } else {
       NSLog(@"Error: Unknown token type");
-      return nil;
+      AWBExpressionToken * et = [[AWBExpressionToken alloc] initWithError:@"Error: Unknown token type"];
+      [outQ insertObject:et atIndex:0];
+      return outQ;
     }
   }
   
@@ -85,7 +77,9 @@
     [stack removeObjectAtIndex:[stack count] - 1];
     if (t.type == LPAREN || t.type == RPAREN) {
       NSLog(@"Error: Mismatched parentheses");
-      return nil;
+      AWBExpressionToken * et = [[AWBExpressionToken alloc] initWithError:@"Error: Mismatched parentheses"];
+      [outQ insertObject:et atIndex:0];
+      return outQ;
     }
     [outQ addObject:t];
   }
@@ -128,7 +122,15 @@ int opPrecedence(const enum tokType op) {
 }
 
 
-+ (NSNumber*) evaluateRPN:(NSMutableArray*)tokens {
++ (NSString*) evaluateRPN:(NSMutableArray*)tokens {
+  
+  // Check for an error token
+  if ([tokens count] > 0) {
+    AWBExpressionToken *t = [tokens objectAtIndex:0];
+    if (t.type == ERROR) {
+      return t.error;
+    }
+  }
   
   NSMutableArray *stack = [[NSMutableArray alloc] init];
   
@@ -140,8 +142,8 @@ int opPrecedence(const enum tokType op) {
       [stack addObject:tok];
     } else if(isOperator(tok.type)) {
       if ([stack count] < 2) {
-        NSLog(@"Error: Incorrect number of argumenst to this operator.");
-        return nil;
+        NSLog(@"Error: Incorrect number of arguments to this operator.");
+        return @"Error: Incorrect number of arguments to this operator.";
       }
       AWBExpressionToken * left = [stack objectAtIndex:[stack count] - 1];
       [stack removeObjectAtIndex:[stack count] - 1];
@@ -169,7 +171,7 @@ int opPrecedence(const enum tokType op) {
           break;
         default:
           NSLog(@"Error: Unknown operand");
-          return nil;
+          return @"Error: Unknown operand";
       }
       
       AWBExpressionToken * newTok = [[AWBExpressionToken alloc] init];
@@ -181,18 +183,17 @@ int opPrecedence(const enum tokType op) {
   
     } else {
       NSLog(@"Error: Unkown operator");
-      return nil;
+      return @"Error: Unkown operator";
     }
     
   }
   
   if ([stack count] == 1){
     AWBExpressionToken * ans = [stack objectAtIndex:0];
-    return ans.val;
+    return [ans.val stringValue];
   } else {
-    NSLog(@"%d", [stack count]);
-    NSLog(@"Error: Values left on the stack");
-    return nil;
+    NSLog(@"Error: %d values left on the stack", [stack count]);
+    return @"Error: Values left on the stack";
   }
   
 }

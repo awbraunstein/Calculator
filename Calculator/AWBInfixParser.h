@@ -14,6 +14,6 @@
 
 + (NSString*) parseExpression:(NSMutableArray*)tokens;
 + (NSMutableArray*) shuntingYard:(NSMutableArray*)tokens;
-+ (NSNumber*) evaluateRPN:(NSMutableArray*)tokens;
++ (NSString*) evaluateRPN:(NSMutableArray*)tokens;
 
 @end

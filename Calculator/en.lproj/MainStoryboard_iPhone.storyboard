@@ -285,7 +285,7 @@
                                     <action selector="symbolPressed:" destination="2" eventType="touchUpInside" id="a9t-BG-OBY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eu8-Lq-Nrm">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" id="eu8-Lq-Nrm">
                                 <rect key="frame" x="0.0" y="14" width="320" height="55"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="51"/>
@@ -321,6 +321,18 @@
     <resources>
         <image name="grid.png" width="310" height="310"/>
     </resources>
+    <classes>
+        <class className="AWBViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AWBViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="clear:"/>
+                <relationship kind="action" name="digitPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="evaluate:" candidateClass="UIButton"/>
+                <relationship kind="action" name="symbolPressed:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="echoArea" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

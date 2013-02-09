@@ -18,13 +18,17 @@ enum tokType {PLUS,
   RPAREN,
   PI,
   E,
-  VAL};
+  VAL,
+  ERROR};
 
 @interface AWBExpressionToken : NSObject
 
 @property enum tokType type;
 @property NSNumber * val;
+@property NSString * error;
 
 - (id) initWithSymbol: (NSString*) symbol;
+
+- (id) initWithError: (NSString*) err;
 
 @end

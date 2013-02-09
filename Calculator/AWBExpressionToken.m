@@ -35,4 +35,13 @@
   return self;
 }
 
+- (id) initWithError: (NSString*) err {
+  self = [super init];
+  if (self) {
+    self.type = ERROR;
+    self.error = err;
+  }
+  return self;
+}
+
 @end
