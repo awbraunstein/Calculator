@@ -31,4 +31,14 @@ enum tokType {PLUS,
 
 - (id) initWithError: (NSString*) err;
 
+- (id) initWithValString: (NSString*) num;
+
+- (id) initWithVal: (NSNumber*) num;
+
+- (BOOL) isOperator;
+
+- (BOOL) isValue;
+
+- (int) opPrecedence;
+
 @end

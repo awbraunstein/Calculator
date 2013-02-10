@@ -28,6 +28,7 @@
   self.readyToClear = YES;
   self.tokenList = [[NSMutableArray alloc] init];
   self.currentNumber = [[NSString alloc] init];
+  self.ans = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,21 +68,11 @@
   self.currentNumber = [self.currentNumber stringByAppendingString:digit];
 }
 
-- (AWBExpressionToken*)tokenFromCurrentNumberString {
-  AWBExpressionToken * tok = [AWBExpressionToken alloc];
-  tok.type = VAL;
-  NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
-  [f setNumberStyle:NSNumberFormatterDecimalStyle];
-  NSLog(@"Current number: %@", self.currentNumber);
-  tok.val = [f numberFromString:self.currentNumber];
-  return tok;
-}
-
 - (IBAction)evaluate:(UIButton *)sender {
   NSLog(@"EVALUATE");
   [self clearEchoArea];
   if (self.inNumber) {
-    [self.tokenList addObject:[self tokenFromCurrentNumberString]];
+    [self.tokenList addObject:[[AWBExpressionToken alloc] initWithValString: self.currentNumber]];
   }
   for (AWBExpressionToken* tok in self.tokenList) {
     if (tok.type == VAL) {
@@ -90,7 +81,16 @@
       NSLog(@"%d", tok.type);
     }
   }
-  [self.echoArea setText:[AWBInfixParser parseExpression:self.tokenList]];
+  NSString * answer = [AWBInfixParser parseExpression:self.tokenList];
+  NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+  [f setNumberStyle:NSNumberFormatterDecimalStyle];
+  NSNumber * ans = [f numberFromString:answer];
+  if (ans == nil) {
+    self.ans = 0;
+  } else {
+    self.ans = ans;
+  }
+  [self.echoArea setText:answer];
   self.readyToClear = YES;
   self.inNumber = NO;
 }
@@ -98,12 +98,17 @@
 - (IBAction)symbolPressed:(UIButton *)sender {
   NSString * sym = [sender currentTitle];
   NSLog(@"%@", sym);
+  AWBExpressionToken * tok = [[AWBExpressionToken alloc] initWithSymbol:sym];
+  if (tok.isOperator && [self.tokenList count] == 0 && self.inNumber == NO) {
+    [self appendToEchoArea:@"Ans"];
+    [self.tokenList addObject: [[AWBExpressionToken alloc] initWithVal:self.ans]];
+  }
   [self appendToEchoArea:sym];
   if (self.inNumber) {
-    [self.tokenList addObject:[self tokenFromCurrentNumberString]];
+    [self.tokenList addObject:[[AWBExpressionToken alloc] initWithValString:self.currentNumber]];
     self.inNumber = NO;
   }
-  [self.tokenList addObject:[[AWBExpressionToken alloc] initWithSymbol:sym]];
+  [self.tokenList addObject: tok];
 
 }
 

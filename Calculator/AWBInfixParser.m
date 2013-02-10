@@ -24,13 +24,13 @@
     AWBExpressionToken *tok = [tokens objectAtIndex:0];
     [tokens removeObjectAtIndex:0];
     
-    if (isValue(tok.type)) {
+    if ([tok isValue]) {
       [outQ addObject:tok];
-    } else if (isOperator(tok.type)) {
+    } else if ([tok isOperator]) {
       while ([stack count] > 0) {
         AWBExpressionToken *op2 = [stack objectAtIndex:[stack count] - 1];
         
-        if (opPrecedence(tok.type) <= opPrecedence(op2.type)) {
+        if ([tok opPrecedence] <= [op2 opPrecedence]) {
           [stack removeObjectAtIndex:[stack count] - 1];
           [outQ addObject:op2];
         }
@@ -88,39 +88,6 @@
 
 }
 
-bool isOperator(const enum tokType op) {
-  switch (op) {
-    case PLUS: case MINUS: case MULT: case DIV: case POW:
-      return true;
-    default:
-      return false;
-  }
-}
-
-bool isValue(const enum tokType tok) {
-  switch (tok) {
-    case VAL: case PI: case E:
-      return true;
-    default:
-      return false;
-  }
-}
-
-
-int opPrecedence(const enum tokType op) {
-  switch(op) {
-    case POW:
-      return 4;
-    case MULT:  case DIV:
-      return 3;
-    case PLUS: case MINUS:
-      return 2;
-    default:
-      return 0;
-  }
-  return 0;
-}
-
 
 + (NSString*) evaluateRPN:(NSMutableArray*)tokens {
   
@@ -138,9 +105,9 @@ int opPrecedence(const enum tokType op) {
     AWBExpressionToken * tok = [tokens objectAtIndex:0];
     [tokens removeObjectAtIndex:0];
     
-    if (isValue(tok.type)) {
+    if ([tok isValue]) {
       [stack addObject:tok];
-    } else if(isOperator(tok.type)) {
+    } else if([tok isOperator]) {
       if ([stack count] < 2) {
         NSLog(@"Error: Incorrect number of arguments to this operator.");
         return @"Error: Incorrect number of arguments to this operator.";

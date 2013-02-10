@@ -22,5 +22,6 @@
 @property BOOL inNumber;
 @property BOOL readyToClear;
 @property NSString * currentNumber;
+@property NSNumber * ans;
 
 @end
