@@ -11,7 +11,31 @@
 @implementation AWBInfixParser
 
 + (NSString*) parseExpression:(NSMutableArray*)tokens {
-  return [self evaluateRPN:[self shuntingYard:tokens]];
+  if ([tokens count] == 0) {
+    return @"";
+  }
+  return [self evaluateRPN:[self shuntingYard:[self insertImplicitMultiplication:tokens]]];
+}
+
++ (NSMutableArray*) insertImplicitMultiplication:(NSMutableArray*)tokens {
+  NSMutableArray *outQ = [[NSMutableArray alloc] init];
+  
+  AWBExpressionToken * lastToken = [tokens objectAtIndex:0];
+  [outQ addObject:lastToken];
+  [tokens removeObjectAtIndex:0];
+  while ([tokens count] > 0) {
+    AWBExpressionToken *tok = [tokens objectAtIndex:0];
+    [tokens removeObjectAtIndex:0];
+    if (([lastToken isValue] && ([tok isValue] || tok.type == LPAREN))|| (
+        lastToken.type == RPAREN && [tok isValue])) {
+      AWBExpressionToken *multTok = [[AWBExpressionToken alloc] init];
+      multTok.type = MULT;
+      [outQ addObject:multTok];
+    }
+    lastToken = tok;
+    [outQ addObject:tok];
+  }
+  return outQ;
 }
 
 + (NSMutableArray*) shuntingYard:(NSMutableArray*)tokens {
