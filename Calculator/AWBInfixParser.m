@@ -10,102 +10,97 @@
 
 @implementation AWBInfixParser
 
-+ (NSString*) parseExpression:(NSMutableArray*)tokens {
-  if ([tokens count] == 0) {
++ (NSString*) parseExpression:(AWBTokenList*)tokens {
+  if ([tokens isEmpty]) {
     return @"";
   }
   return [self evaluateRPN:[self shuntingYard:[self insertImplicitMultiplication:tokens]]];
 }
 
-+ (NSMutableArray*) insertImplicitMultiplication:(NSMutableArray*)tokens {
-  NSMutableArray *outQ = [[NSMutableArray alloc] init];
++ (AWBTokenList*) insertImplicitMultiplication:(AWBTokenList*)tokens {
+  AWBTokenList *outQ = [[AWBTokenList alloc] init];
   
-  AWBExpressionToken * lastToken = [tokens objectAtIndex:0];
-  [outQ addObject:lastToken];
-  [tokens removeObjectAtIndex:0];
-  while ([tokens count] > 0) {
-    AWBExpressionToken *tok = [tokens objectAtIndex:0];
-    [tokens removeObjectAtIndex:0];
+  AWBExpressionToken * lastToken = [tokens popFront];
+  [outQ pushBack:lastToken];
+  while (![tokens isEmpty]) {
+    AWBExpressionToken *tok = [tokens popFront];
     if (([lastToken isValue] && ([tok isValue] || tok.type == LPAREN))|| (
         lastToken.type == RPAREN && [tok isValue])) {
       AWBExpressionToken *multTok = [[AWBExpressionToken alloc] init];
       multTok.type = MULT;
-      [outQ addObject:multTok];
+      [outQ pushBack:multTok];
     }
     lastToken = tok;
-    [outQ addObject:tok];
+    [outQ pushBack:tok];
   }
   return outQ;
 }
 
-+ (NSMutableArray*) shuntingYard:(NSMutableArray*)tokens {
++ (AWBTokenList*) shuntingYard:(AWBTokenList*)tokens {
   
-  NSMutableArray *outQ = [[NSMutableArray alloc] init];
-  NSMutableArray *stack = [[NSMutableArray alloc] init];
+  AWBTokenList *outQ = [[AWBTokenList alloc] init];
+  AWBTokenList *stack = [[AWBTokenList alloc] init];
   
-  while ([tokens count] > 0) {
+  while (![tokens isEmpty]) {
     // Read a token
-    AWBExpressionToken *tok = [tokens objectAtIndex:0];
-    [tokens removeObjectAtIndex:0];
+    AWBExpressionToken *tok = [tokens popFront];
     
     if ([tok isValue]) {
-      [outQ addObject:tok];
+      [outQ pushBack:tok];
     } else if ([tok isOperator]) {
-      while ([stack count] > 0) {
-        AWBExpressionToken *op2 = [stack objectAtIndex:[stack count] - 1];
+      while (![stack isEmpty]) {
+        AWBExpressionToken *op2 = [stack peekBack];
         
         if ([tok opPrecedence] <= [op2 opPrecedence]) {
-          [stack removeObjectAtIndex:[stack count] - 1];
-          [outQ addObject:op2];
+          [stack popBack];
+          [outQ pushBack:op2];
         }
         else {
           break;
         }
       }
-      [stack addObject:tok];
+      [stack pushBack:tok];
     } else if (tok.type == LPAREN) {
-      [stack addObject:tok];
+      [stack pushBack:tok];
     } else if (tok.type == RPAREN) {
       
       BOOL rp = NO;
       
-      while ([stack count] > 0) {
-        AWBExpressionToken * t = [stack objectAtIndex:[stack count] - 1];
-        [stack removeObjectAtIndex:[stack count] - 1];
+      while (![stack isEmpty]) {
+        AWBExpressionToken * t = [stack popBack];
       
         if (t.type == LPAREN) {
           rp = YES;
           break;
         } else {
-          [outQ addObject:t];
+          [outQ pushBack:t];
         }
       }
       
       if (!rp) {
         NSLog(@"Error: Mismatched parentheses");
         AWBExpressionToken * et = [[AWBExpressionToken alloc] initWithError:@"Error: Mismatched parentheses"];
-        [outQ insertObject:et atIndex:0];
+        [outQ pushFront:et];
         return outQ;
       }
       
     } else {
       NSLog(@"Error: Unknown token type");
       AWBExpressionToken * et = [[AWBExpressionToken alloc] initWithError:@"Error: Unknown token type"];
-      [outQ insertObject:et atIndex:0];
+      [outQ pushFront:et];
       return outQ;
     }
   }
   
-  while ([stack count] > 0) {
-    AWBExpressionToken * t = [stack objectAtIndex:[stack count] - 1];
-    [stack removeObjectAtIndex:[stack count] - 1];
+  while (![stack isEmpty]) {
+    AWBExpressionToken * t = [stack popBack];
     if (t.type == LPAREN || t.type == RPAREN) {
       NSLog(@"Error: Mismatched parentheses");
       AWBExpressionToken * et = [[AWBExpressionToken alloc] initWithError:@"Error: Mismatched parentheses"];
-      [outQ insertObject:et atIndex:0];
+      [outQ pushFront:et];
       return outQ;
     }
-    [outQ addObject:t];
+    [outQ pushBack:t];
   }
   
   return outQ;
@@ -113,34 +108,30 @@
 }
 
 
-+ (NSString*) evaluateRPN:(NSMutableArray*)tokens {
++ (NSString*) evaluateRPN:(AWBTokenList*)tokens {
   
   // Check for an error token
-  if ([tokens count] > 0) {
-    AWBExpressionToken *t = [tokens objectAtIndex:0];
+  if (![tokens isEmpty]) {
+    AWBExpressionToken *t = [tokens peekFront];
     if (t.type == ERROR) {
       return t.error;
     }
   }
   
-  NSMutableArray *stack = [[NSMutableArray alloc] init];
+  AWBTokenList *stack = [[AWBTokenList alloc] init];
   
-  while ([tokens count] > 0) {
-    AWBExpressionToken * tok = [tokens objectAtIndex:0];
-    [tokens removeObjectAtIndex:0];
+  while (![tokens isEmpty]) {
+    AWBExpressionToken * tok = [tokens popFront];
     
     if ([tok isValue]) {
-      [stack addObject:tok];
+      [stack pushBack:tok];
     } else if([tok isOperator]) {
       if ([stack count] < 2) {
         NSLog(@"Error: Incorrect number of arguments to this operator.");
         return @"Error: Incorrect number of arguments to this operator.";
       }
-      AWBExpressionToken * left = [stack objectAtIndex:[stack count] - 1];
-      [stack removeObjectAtIndex:[stack count] - 1];
-      
-      AWBExpressionToken * right = [stack objectAtIndex:[stack count] - 1];
-      [stack removeObjectAtIndex:[stack count] - 1];
+      AWBExpressionToken * left = [stack popBack];
+      AWBExpressionToken * right = [stack popBack];
       
       NSNumber * result;
       
@@ -170,7 +161,7 @@
       newTok.type = VAL;
       newTok.val = result;
       
-      [stack addObject:newTok];
+      [stack pushBack:newTok];
   
     } else {
       NSLog(@"Error: Unkown operator");
@@ -180,7 +171,7 @@
   }
   
   if ([stack count] == 1){
-    AWBExpressionToken * ans = [stack objectAtIndex:0];
+    AWBExpressionToken * ans = [stack popFront];
     return [ans.val stringValue];
   } else {
     NSLog(@"Error: %d values left on the stack", [stack count]);

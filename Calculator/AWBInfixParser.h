@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "AWBExpressionToken.h"
+#import "AWBTokenList.h"
 
 
 @interface AWBInfixParser : NSObject
 
-+ (NSString*) parseExpression:(NSMutableArray*)tokens;
-+ (NSMutableArray*) shuntingYard:(NSMutableArray*)tokens;
-+ (NSMutableArray*) insertImplicitMultiplication:(NSMutableArray*)tokens;
-+ (NSString*) evaluateRPN:(NSMutableArray*)tokens;
++ (NSString*) parseExpression:(AWBTokenList*)tokens;
++ (AWBTokenList*) shuntingYard:(AWBTokenList*)tokens;
++ (AWBTokenList*) insertImplicitMultiplication:(AWBTokenList*)tokens;
++ (NSString*) evaluateRPN:(AWBTokenList*)tokens;
 
 @end

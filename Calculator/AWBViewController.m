@@ -26,7 +26,7 @@
   
   self.inNumber = NO;
   self.readyToClear = YES;
-  self.tokenList = [[NSMutableArray alloc] init];
+  self.tokenList = [[AWBTokenList alloc] init];
   self.currentNumber = [[NSString alloc] init];
   self.ans = 0;
 }
@@ -72,14 +72,7 @@
   NSLog(@"EVALUATE");
   [self clearEchoArea];
   if (self.inNumber) {
-    [self.tokenList addObject:[[AWBExpressionToken alloc] initWithValString: self.currentNumber]];
-  }
-  for (AWBExpressionToken* tok in self.tokenList) {
-    if (tok.type == VAL) {
-      NSLog(@"val: %@", tok.val);
-    } else {
-      NSLog(@"%d", tok.type);
-    }
+    [self.tokenList pushBack:[[AWBExpressionToken alloc] initWithValString: self.currentNumber]];
   }
   NSString * answer = [AWBInfixParser parseExpression:self.tokenList];
   NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
@@ -99,16 +92,16 @@
   NSString * sym = [sender currentTitle];
   NSLog(@"%@", sym);
   AWBExpressionToken * tok = [[AWBExpressionToken alloc] initWithSymbol:sym];
-  if (tok.isOperator && [self.tokenList count] == 0 && self.inNumber == NO) {
+  if (tok.isOperator && [self.tokenList isEmpty] && self.inNumber == NO) {
     [self appendToEchoArea:@"Ans"];
-    [self.tokenList addObject: [[AWBExpressionToken alloc] initWithVal:self.ans]];
+    [self.tokenList pushBack: [[AWBExpressionToken alloc] initWithVal:self.ans]];
   }
   [self appendToEchoArea:sym];
   if (self.inNumber) {
-    [self.tokenList addObject:[[AWBExpressionToken alloc] initWithValString:self.currentNumber]];
+    [self.tokenList pushBack:[[AWBExpressionToken alloc] initWithValString:self.currentNumber]];
     self.inNumber = NO;
   }
-  [self.tokenList addObject: tok];
+  [self.tokenList pushBack: tok];
 
 }
 

@@ -30,6 +30,7 @@
 		80AE3B5216B9B3570042C11D /* use_your_illusion.png in Resources */ = {isa = PBXBuildFile; fileRef = 80AE3B5016B9B3570042C11D /* use_your_illusion.png */; };
 		80DA92D916B9AD5800F90BB1 /* grid_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 80DA92D716B9AD5800F90BB1 /* grid_@2X.png */; };
 		80DA92DA16B9AD5800F90BB1 /* grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 80DA92D816B9AD5800F90BB1 /* grid.png */; };
+		80E1126016C832C8002985C0 /* AWBTokenList.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E1125F16C832C8002985C0 /* AWBTokenList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		80AE3B5016B9B3570042C11D /* use_your_illusion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = use_your_illusion.png; sourceTree = "<group>"; };
 		80DA92D716B9AD5800F90BB1 /* grid_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grid_@2X.png"; sourceTree = "<group>"; };
 		80DA92D816B9AD5800F90BB1 /* grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grid.png; sourceTree = "<group>"; };
+		80E1125E16C832C8002985C0 /* AWBTokenList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWBTokenList.h; sourceTree = "<group>"; };
+		80E1125F16C832C8002985C0 /* AWBTokenList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWBTokenList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,8 @@
 				8097B80C16A47663005DD3FB /* MainStoryboard_iPad.storyboard */,
 				808563D316C1A2CC00FCEBBD /* AWBInfixParser.h */,
 				808563D416C1A2CC00FCEBBD /* AWBInfixParser.m */,
+				80E1125E16C832C8002985C0 /* AWBTokenList.h */,
+				80E1125F16C832C8002985C0 /* AWBTokenList.m */,
 				808563D716C1C2F000FCEBBD /* AWBExpressionToken.h */,
 				808563D816C1C2F000FCEBBD /* AWBExpressionToken.m */,
 				8097B80F16A47663005DD3FB /* AWBViewController.h */,
@@ -315,6 +320,7 @@
 				8097B81116A47663005DD3FB /* AWBViewController.m in Sources */,
 				808563D516C1A2CC00FCEBBD /* AWBInfixParser.m in Sources */,
 				808563D916C1C2F000FCEBBD /* AWBExpressionToken.m in Sources */,
+				80E1126016C832C8002985C0 /* AWBTokenList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

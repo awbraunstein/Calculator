@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AWBExpressionToken.h"
 #import "AWBInfixParser.h"
+#import "AWBTokenList.h"
 
 @interface AWBViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *echoArea;
@@ -18,7 +19,7 @@
 - (IBAction)symbolPressed:(UIButton *)sender;
 
 
-@property NSMutableArray * tokenList;
+@property AWBTokenList * tokenList;
 @property BOOL inNumber;
 @property BOOL readyToClear;
 @property NSString * currentNumber;
