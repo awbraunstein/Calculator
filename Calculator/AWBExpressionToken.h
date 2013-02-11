@@ -17,7 +17,6 @@ enum tokType {PLUS,
   LPAREN,
   RPAREN,
   PI,
-  E,
   VAL,
   ERROR};
 

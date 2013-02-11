@@ -60,6 +60,9 @@
 - (IBAction)digitPressed:(UIButton *)sender {
   NSString * digit = [sender currentTitle];
   NSLog(@"%@", digit);
+  if ([digit isEqualToString:@"(-)"]) {
+    digit = @"-";
+  }
   [self appendToEchoArea:digit];
   if (! self.inNumber) {
     self.currentNumber = [[NSString alloc] init];
@@ -72,7 +75,8 @@
   NSLog(@"EVALUATE");
   [self clearEchoArea];
   if (self.inNumber) {
-    [self.tokenList pushBack:[[AWBExpressionToken alloc] initWithValString: self.currentNumber]];
+    AWBExpressionToken * tok = [[AWBExpressionToken alloc] initWithValString:self.currentNumber];
+    [self.tokenList pushBack:tok];
   }
   NSString * answer = [AWBInfixParser parseExpression:self.tokenList];
   NSNumberFormatter * f = [[NSNumberFormatter alloc] init];

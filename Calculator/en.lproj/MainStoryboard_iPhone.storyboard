@@ -184,14 +184,14 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Gs6-bW-1Dc">
                                 <rect key="frame" x="240" y="90" width="50" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
-                                <state key="normal" title="e" backgroundImage="grid.png">
+                                <state key="normal" title="(-)" backgroundImage="grid.png">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="symbolPressed:" destination="2" eventType="touchUpInside" id="4xx-NS-4Ui"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="F49-ml-MpO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="45m-m1-hTs">
