@@ -76,6 +76,13 @@
   [self clearEchoArea];
   if (self.inNumber) {
     AWBExpressionToken * tok = [[AWBExpressionToken alloc] initWithValString:self.currentNumber];
+    if (tok.val == nil) {
+      [self.echoArea setText:@"Error: Illegal number"];
+      [self.tokenList removeAllObjects];
+      self.readyToClear = YES;
+      self.inNumber = NO;
+      return;
+    }
     [self.tokenList pushBack:tok];
   }
   NSString * answer = [AWBInfixParser parseExpression:self.tokenList];
@@ -90,6 +97,7 @@
   [self.echoArea setText:answer];
   self.readyToClear = YES;
   self.inNumber = NO;
+  [self.tokenList removeAllObjects];
 }
 
 - (IBAction)symbolPressed:(UIButton *)sender {
@@ -102,6 +110,7 @@
   }
   [self appendToEchoArea:sym];
   if (self.inNumber) {
+    [self.tokenList pushBack:[[AWBExpressionToken alloc] initWithValString:self.currentNumber]];
     [self.tokenList pushBack:[[AWBExpressionToken alloc] initWithValString:self.currentNumber]];
     self.inNumber = NO;
   }
