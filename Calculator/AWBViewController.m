@@ -85,6 +85,7 @@
     }
     [self.tokenList pushBack:tok];
   }
+  
   NSString * answer = [AWBInfixParser parseExpression:self.tokenList];
   NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
   [f setNumberStyle:NSNumberFormatterDecimalStyle];
@@ -110,7 +111,6 @@
   }
   [self appendToEchoArea:sym];
   if (self.inNumber) {
-    [self.tokenList pushBack:[[AWBExpressionToken alloc] initWithValString:self.currentNumber]];
     [self.tokenList pushBack:[[AWBExpressionToken alloc] initWithValString:self.currentNumber]];
     self.inNumber = NO;
   }
